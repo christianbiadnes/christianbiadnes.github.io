@@ -6,7 +6,7 @@ html {
 
 body {
     background-color: #fff;
-    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     color: #475059;
@@ -30,18 +30,6 @@ a.primary-btn {
     font-size: 25px;
     padding: 15px 70px;
     border-radius: 18px;
-}
-
-a.secondary-btn {
-    color: #fff !important;
-    background-color: #1e5670;
-    padding: 10px 24px;
-    border-radius: 10px;
-    transition: all 0.5s ease;
-}
-
-a.secondary-btn:hover {
-    background-color: #4198B9;
 }
 
 .font-blue {
@@ -81,60 +69,129 @@ p {
     display: flex;
 }
 
-#where-were-heading .wrapper,#case-studies .wrapper,#team-members .wrapper {
+#where-were-heading .wrapper,
+#case-studies .wrapper,
+#team-members .wrapper {
     padding: 70px 0;
 }
 
+/* Header and Hamburger Menu */
 
-/* Header */
-
-header {
+#header-div {
     background-color: #fff;
-    min-height: 70px;
+    width: 100%;
+    z-index: 3;
     border-top: 5px solid #4198b9;
+    padding-top: 20px;
 }
 
-#header .wrapper {
-    padding-top: 30px;
-}
-
-header #logo {
-    float: left;
-}
-
-header nav {
-    float: right;
-    margin-top: 10px;
-}
-
-#main-menu ul {
-    list-style-type: none;
-    padding: 0;
+.header ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
 }
 
-#main-menu li {
-    display: inline-block;
-}
-
-#main-menu li a {
-    text-decoration: none;
-    margin: auto 15px;
+.header li a {
+    display: block;
     font-weight: 700;
     font-size: 14px;
     color: #475059;
     transition: 0.5s;
+    text-decoration: none;
+    margin: 10px;
 }
 
-#main-menu li a:hover {
+.header li a:hover {
     color: #4198b9;
 }
 
-#landing {
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 0;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* Menu Icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* Menu Button */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+#hero {
     background-image: url('/images/hero-1.png');
     background-size: cover;
     background-position: center right;
-    height: 100vh;
+    margin-top: -20px;
+    height: 90vh;
 }
 
 #hero .wrapper {
@@ -200,7 +257,6 @@ header nav {
     background: linear-gradient(#4198b9, #6bb3c0);
     text-align: center;
 }
-
 
 #where-were-heading h2,
 #where-were-heading p {
@@ -289,3 +345,41 @@ footer p {
     color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+
+
+} 
+    
+@media (min-width: 769px) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 8px 0;
+        margin: auto 17px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        margin-top: 15px;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    .menu .secondary-btn {
+        color: #fff !important;
+        background-color: #1e5670;
+        padding: 8px 24px;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+
+    a.secondary-btn:hover {
+        background-color: #4198B9;
+    }
+}
