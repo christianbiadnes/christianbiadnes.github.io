@@ -137,7 +137,7 @@ p {
     height: 2px;
     position: relative;
     transition: background .2s ease-out;
-    width: 18px;
+    width: 24px;
 }
 
 .header .menu-icon .navicon:before,
@@ -186,8 +186,10 @@ p {
     top: 0;
 }
 
+/* Hero Image */
+
 #hero {
-    background-image: url('/images/hero-1.png');
+    background-image: url('/images/hero.png');
     background-size: cover;
     background-position: center right;
     margin-top: -20px;
@@ -198,8 +200,13 @@ p {
     padding: 50px 0;
 }
 
+#hero h1 {
+    text-shadow: 1px 1px 3px #fff;
+}
+
 #hero p {
     padding-bottom: 30px;
+    text-shadow: 1px 1px 3px #fff;
 }
 
 /* What Motivates Us */
@@ -271,7 +278,7 @@ p {
 }
 
 #case-studies .features p {
-    font-size: 18;
+    font-size: 18px;
 }
 
 .article {
@@ -309,7 +316,7 @@ p {
 }
 
 #team-members .features p {
-    font-size: 18;
+    font-size: 18px;
 }
 
 .headshot {
@@ -345,12 +352,26 @@ footer p {
     color: #fff;
 }
 
-@media screen and (max-width: 768px) {
 
+/* Responsive and Header fix */
 
-} 
-    
-@media (min-width: 769px) {
+@media screen and (max-width: 1300px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    p,
+    a {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    #hero p {
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 921px) {
     .header li {
         float: left;
     }
@@ -382,4 +403,162 @@ footer p {
     a.secondary-btn:hover {
         background-color: #4198B9;
     }
+}
+
+@media screen and (min-width: 920px) and (max-width: 1250px) {
+
+    .header li a {
+        padding: 4px 0;
+        margin: auto 12px !important;
+        font-size: 10px;
+    }
+
+    .header .logo {
+        font-size: 1em;
+        padding: 5px 0;
+    }
+
+    #what-we-do .grid-section:nth-child(2n) {
+        margin: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    #what-we-do h2 {
+        text-align: center;
+    }
+
+    #what-motivates .grid {
+        display: block;
+    }
+
+    #what-we-do .grid {
+        display: block;
+    }
+
+    #what-we-do .grid-section {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #what-we-do .grid-section:nth-child(2n) {
+        margin: 40px auto;
+    }
+
+    #team-members .wrapper {
+        padding: 20px 0;
+    }
+
+    #hero {
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-position: 60% 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    p,
+    a {
+        font-size: 16px;
+    }
+
+    #what-motivates .features {
+        width: 30%;
+        margin: 2% 1%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    #hero {
+        background-position: 70% 100%;
+        background-repeat: no-repeat;
+        height: 80vh;
+    }
+
+    p,
+    a,
+    .subheading {
+        font-size: 15px;
+    }
+
+    h1,
+    h2 {
+        font-size: 30px;
+    }
+
+    #what-motivates .features {
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+
+    #what-motivates .features img {
+        width: 55px;
+    }
+
+    a.primary-btn {
+        font-size: 15px;
+        padding: 15px 30px;
+    }
+
+
+    .article p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    #hero h1 {
+        font-size: 21px;
+    }
+
+    #hero p {
+        font-size: 13px;
+    }
+
+    #case-studies .grid {
+        display: block;
+    }
+
+    .article {
+        width: 70%;
+        margin: auto;
+    }
+
+    #team-members .grid {
+        display: block;
+    }
+
+    #team-members .headshot {
+        display: inline-block;
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    #hero {
+        height: 70vh;
+    }
+
+    #team-members .primary-btn {
+        font-size: 13px;
+    }
+
+    #hero .primary-btn {
+        padding: 15px 40px;
+    }
+
+    h1,
+    h2 {
+        font-size: 24px;
+    }
+
 }
