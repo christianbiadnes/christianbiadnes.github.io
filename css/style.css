@@ -457,6 +457,10 @@ footer p {
         background-repeat: no-repeat;
         background-position: 60% 100%;
     }
+
+    #what-motivates {
+        padding: 20px 0;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -496,7 +500,7 @@ footer p {
 
     #what-motivates .features {
         width: 100%;
-        margin: auto;
+        margin: 10px auto;
         display: block;
     }
 
