@@ -562,3 +562,15 @@ footer p {
     }
 
 }
+
+@media screen and (min-width: 1921px) {
+    #hero-content {
+        margin: auto 0;
+    }
+    
+    #hero .wrapper {
+    height: 90%;
+    display: flex;
+    padding: 0;
+    }
+}
