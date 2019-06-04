@@ -189,7 +189,7 @@ p {
 /* Hero Image */
 
 #hero {
-    background-image: url('/images/hero.png');
+    background-image: url('/images/hero-bg.png');
     background-size: cover;
     background-position: center right;
     margin-top: -20px;
@@ -254,7 +254,7 @@ p {
 }
 
 #what-we-do .grid-section:nth-child(2n) {
-    margin: 40px;
+    margin: auto 40px;
 }
 
 /* Where We're Heading */
