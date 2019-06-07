@@ -75,6 +75,10 @@ p {
     padding: 70px 0;
 }
 
+footer a {
+    font-size: 14px !important;
+}
+
 /* Header and Hamburger Menu */
 
 #header-div {
@@ -339,19 +343,83 @@ p {
 }
 
 /* Footer */
-footer {
+
+footer #footer-widget {
     background-color: #475059;
-    padding: 10px;
+    color: #a2a2a2;
     text-align: center;
-    border-top: 5px solid #4198b9;
-    font-size: 13px;
+    padding: 10px;
+    border-top: 3px solid #4198b9;
 }
 
-footer p {
+footer h3 {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+#footer-logo {
+    width: 200px;
+    margin: auto;
+}
+
+footer #copyright {
+    background-color: #242424;
+    color: #a2a2a2;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#footer-nav,
+footer #copyright div {
+    display: inline-block;
+}
+
+#footer-nav ul {
+    margin-left: 5px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+#footer-nav ul li {
+    display: inline;
+}
+
+footer a {
+    text-decoration: none;
+    color: #a2a2a2;
+}
+
+footer a:hover {
+    font-weight: 500;
+}
+
+#footer-nav li:first-child:after {
+    content: " • ";
+}
+
+
+/* Terms Content */
+
+article#terms-content p {
     font-size: 15px;
-    color: #fff;
+    font-weight: normal;
 }
 
+#terms-content .wrapper {
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    margin: 20px auto 60px;
+    padding: 20px 20px 50px 20px;
+}
+
+#terms-content a {
+    text-decoration: none;
+    color: #4198B9;
+}
 
 /* Responsive and Header fix */
 
@@ -403,6 +471,11 @@ footer p {
     a.secondary-btn:hover {
         background-color: #4198B9;
     }
+
+    #terms-content .wrapper {
+        padding: 20px 50px 50px;
+    }
+    
 }
 
 @media screen and (min-width: 920px) and (max-width: 1250px) {
@@ -420,6 +493,10 @@ footer p {
 
     #what-we-do .grid-section:nth-child(2n) {
         margin: 10px;
+    }
+
+    #terms-content .wrapper {
+        padding: 20px 20px 50px;
     }
 
 }
@@ -547,7 +624,7 @@ footer p {
         width: 30%;
         margin: 0 auto;
     }
-    
+
     #team-members .primary-btn {
         font-size: 13px;
     }
@@ -561,16 +638,20 @@ footer p {
         font-size: 24px;
     }
 
+    #terms-content .wrapper {
+        padding: 10px;
+    }
+
 }
 
 @media screen and (min-width: 1921px) {
     #hero-content {
         margin: auto 0;
     }
-    
+
     #hero .wrapper {
-    height: 90%;
-    display: flex;
-    padding: 0;
+        height: 90%;
+        display: flex;
+        padding: 0;
     }
 }
