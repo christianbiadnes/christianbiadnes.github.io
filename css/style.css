@@ -111,11 +111,11 @@ footer a {
     color: #4198b9;
 }
 
-.header .logo {
-    display: block;
+
+#logo{
     float: left;
-    font-size: 2em;
-    padding: 10px 0;
+    padding: 0px;
+    width: 200px;
 }
 
 .header .menu {
@@ -423,7 +423,7 @@ article#terms-content p {
 
 /* Responsive and Header fix */
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
     .wrapper {
         width: 90%;
     }
@@ -453,7 +453,7 @@ article#terms-content p {
         clear: none;
         float: right;
         max-height: none;
-        margin-top: 15px;
+        margin-top: 16px;
     }
 
     .header .menu-icon {
@@ -486,9 +486,8 @@ article#terms-content p {
         font-size: 10px;
     }
 
-    .header .logo {
-        font-size: 1em;
-        padding: 5px 0;
+    .header .menu {
+        margin-top: 20px;
     }
 
     #what-we-do .grid-section:nth-child(2n) {
